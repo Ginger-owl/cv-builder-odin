@@ -8,15 +8,15 @@ import './App.css'
 
 const initialState = {
   mainInfo: {
-    name: '',
-    email: '',
-    address: ''
+    name: 'Hugo',
+    email: 'Olivier',
+    address: '67 Rue Belliard, 75018 Paris, France'
   },
   educationInfo: [
-    { schoolName: '', titleOfStudy: '', startDate: '', endDate: '' }
+    { schoolName: 'PSL Research University', subjectArea: 'Artificial Intelligence and Organizational Sciences', startDate: '01.09.2020', endDate: '01.06.2023' }
   ],
   occupationInfo: [
-    { companyName: '', position: '', startDate: '', endDate: '' }
+    { companyName: 'Capgemini', position: 'Software Engineer', startDate: '01.06.2023', endDate: '01.06.2024' }
   ]
 };
 
@@ -58,7 +58,7 @@ export const App = () => {
       ...prevState,
       educationInfo: [
         ...prevState.educationInfo,
-        { schoolName: '', titleOfStudy: '', startDate: '', endDate: '' }
+        { schoolName: '', subjectArea: '', startDate: '', endDate: '' }
       ]
     }));
   };
