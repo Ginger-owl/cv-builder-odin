@@ -3,6 +3,8 @@ import { DisplayCV } from './components/DisplayCV.jsx';
 import { MainInfoForm } from './components/MainInfoForm.jsx';
 import { EducationForm } from './components/EducationForm.jsx';
 import { OccupationForm } from './components/OccupationForm.jsx';
+import './App.css'
+
 
 const initialState = {
   mainInfo: {
@@ -85,7 +87,10 @@ export const App = () => {
   };
 
   return (
-    <>
+    <main className='content'>
+       <button className='modeToggle-btn' onClick={() => setIsEditing(!isEditing)}>
+        {isEditing ? 'Switch to Display Mode' : 'Switch to Edit Mode'}
+      </button>
       {isEditing ? (
         <div>
           <MainInfoForm mainInfo={state.mainInfo} handleMainInfoChange={handleMainInfoChange} />
@@ -95,9 +100,7 @@ export const App = () => {
       ) : (
         <DisplayCV data={state} />
       )}
-      <button onClick={() => setIsEditing(!isEditing)}>
-        {isEditing ? 'Switch to Display Mode' : 'Switch to Edit Mode'}
-      </button>
-    </>
+     
+    </main>
   );
 }

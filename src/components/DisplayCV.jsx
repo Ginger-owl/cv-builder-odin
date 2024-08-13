@@ -2,7 +2,7 @@ import React from 'react';
 
 export const DisplayCV = ({ data }) => {
   return (
-    <div>
+    <article>
       <h1>{data.mainInfo.name}</h1>
       <p>Email: {data.mainInfo.email}</p>
       <p>Address: {data.mainInfo.address}</p>
@@ -24,6 +24,6 @@ export const DisplayCV = ({ data }) => {
           <p>Dates: {occ.workDates}</p>
         </div>
       ))}
-    </div>
+    </article>
   );
 };
